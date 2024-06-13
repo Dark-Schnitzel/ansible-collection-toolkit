@@ -9,6 +9,7 @@
   ansible.builtin.import_tasks: "install.yml"
 
 - name: "Set up SSL/TLS"
+  when: zammad_ssl_enable
   ansible.builtin.import_tasks: "ssl.yml"
 
 - name: "Configure nginx"
